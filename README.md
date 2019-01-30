@@ -1,2 +1,1 @@
-# shortcut
-Shortcut case
+# testcase
