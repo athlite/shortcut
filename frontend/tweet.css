@@ -1,0 +1,19 @@
+@keyframes FadeOut {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.tweet {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #C0DEEE;
+  border-radius: 4px;
+}
+
+.tweet.is-first {
+  animation: FadeOut 2s;
+}
