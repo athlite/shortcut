@@ -1,0 +1,48 @@
+
+html, body {
+  font-family: sans-serif;
+  font-size: 12pt;
+}
+
+body {
+  margin: 0;
+}
+
+#main {
+  max-width: 960px;
+  margin: 20px auto 0;
+}
+
+.container {
+  padding: 0 5px;
+}
+
+.index h1 {
+  text-align: center;
+  background-color: #C0DEED;
+  border-radius: 4px;
+  padding: 5px 0;
+}
+
+.field {
+  margin: 10px 0;
+}
+
+.field label {
+  display: block;
+  font-size: 1.2em;
+  padding: 5px 5px;
+}
+
+.field input {
+  font-size: 1.2em;
+  padding: 5px 5px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.field input:focus {
+  /* border-color: black; */
+  outline: none;
+}

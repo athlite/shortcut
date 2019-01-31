@@ -12,8 +12,14 @@
   padding: 10px;
   border: 1px solid #C0DEEE;
   border-radius: 4px;
+  background-color: #edf9ff;
 }
 
 .tweet.is-first {
   animation: FadeOut 2s;
+}
+
+.tweet .user {
+  margin: 10px 0 0;
+  font-style: italic;
 }
