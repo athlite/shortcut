@@ -1,9 +1,10 @@
 'use strict';
+
 const Path = require('path');
 const Dotenv = require('dotenv');
 const Confidence = require('confidence');
 const Toys = require('toys');
-console.log(Path.join(__dirname, '..', 'public'))
+
 // Pull .env into process.env
 Dotenv.config({ path: `${__dirname}/.env` });
 
@@ -36,6 +37,9 @@ module.exports = new Confidence.Store({
     plugins: [
       {
         plugin: 'inert'
+      },
+      {
+        plugin: 'nes'
       },
       {
         plugin: '../lib', // routes
