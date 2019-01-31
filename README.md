@@ -12,3 +12,5 @@ TWITTER_API_KEY="api-key"
 TWITTER_API_KEY_SECRET="api-secret-key"
 TWITTER_ACCESS_TOKEN="access-token"
 TWITTER_ACCESS_TOKEN_SECRET="access-token-secret"
+
+These has to be keys from your own developer account at Twitter!
