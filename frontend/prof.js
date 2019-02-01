@@ -2,21 +2,26 @@ import React from 'react';
 
 /**
  * Prof
- * Show the diff time between two tweets.
+ * Show the average tweets per second.
  */
 export default class Prof extends React.Component {
   render() {
 
-    const { start, end } = this.props;
+    const { startedAt, count } = this.props;
     
-    if (!(start && end)) {
+
+    if (!startedAt || count < 1) {
       return null;
     }
+    
+    const currentTime = Date.now();
 
-    const spent = (end - start) / 1000;
+    const timeSpent = (currentTime - startedAt);
+    const numberOfTweetsPerSecond = ((count / timeSpent) * 1000).toFixed(2);
+
     return (
       <div className="prof" style={{textAlign: 'center', fontWeight: '100'}}>
-        One tweet per {spent}s
+        Average, {numberOfTweetsPerSecond} tweets per sec.
       </div>
     )
   }
