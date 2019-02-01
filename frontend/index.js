@@ -20,6 +20,10 @@ class Index extends React.Component {
   };
 
   currentHandler = null;
+  
+  startedAt = null;
+  
+  tweetCount = 0;
 
   componentWillMount() {
     client.connect();
@@ -34,15 +38,19 @@ class Index extends React.Component {
     if (this.state.currentTopic) {
       client.unsubscribe(`/topic/${this.state.currentTopic}`)
     }
+    
+    this.tweetCount = 0;
+    this.startedAt = Date.now();
 
     this.setState({
       currentTopic: topic,
       topic: ''
     }, () => {
       fetch(`/create-topic/${topic}`).then(res => res.json()).then(data => {
+
         this.currentHandler = ((tweet) => {
           
-          prof = [Date.now()].concat(prof).slice(0,2);
+          this.tweetCount += 1;
 
           const _tweets = [tweet].concat(this.state.tweets);
           const tweets = _tweets.reduce(((acc, cur) => {
@@ -63,7 +71,7 @@ class Index extends React.Component {
       <div className="index container">
         <h1>Tweetstorm</h1>
         <CurrentTopic topic={this.state.currentTopic} />
-        <Prof start={prof[1]} end={prof[0]} />
+        <Prof startedAt={this.startedAt} count={this.tweetCount} />
         <div className="field">
           <label htmlFor="search">Search:</label>
           <input onChange={e => {
