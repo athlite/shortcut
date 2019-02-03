@@ -1,4 +1,3 @@
-// sourceType: module
 
 import React from 'react'
 import './tweet.css';
@@ -10,8 +9,8 @@ import './tweet.css';
 export default class Tweet extends React.Component {
   render() {
 
-    const klass = `tweet ${this.props.isFirst ? 'is-first' : ''}`
-
+    const klass = [`tweet`, `${this.props.isFirst ? 'is-first' : ''}`].filter(k => k).join(' ');
+    
     if (!this.props.tweet) {
       return (
         <div className={klass}>
