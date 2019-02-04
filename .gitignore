@@ -3,3 +3,4 @@ node_modules
 server/.env
 .env
 public/js/main.js
+public/js/vendors~main.js
