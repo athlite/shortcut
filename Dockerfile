@@ -8,6 +8,6 @@ RUN yarn install
 
 COPY . .
 
-RUN yarn run webpack -p
+RUN yarn build
 
 CMD ["node", "server"]
