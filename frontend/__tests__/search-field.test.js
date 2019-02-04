@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { render, cleanup, fireEvent } from 'react-testing-library'
-import SearchField from './search-field';
+import SearchField from '../search-field';
 
 describe('SearchField Component', () => {
   

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { render, cleanup } from 'react-testing-library'
-import CurrentTopic from './current-topic';
+import CurrentTopic from '../current-topic';
 
 describe('CurrentTopic Component', () => {
   

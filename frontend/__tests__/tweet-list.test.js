@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { render } from 'react-testing-library'
-import TweetList from './tweet-list';
+import TweetList from '../tweet-list';
 
 describe('TweetList Component', () => {
   it('should render', () => {

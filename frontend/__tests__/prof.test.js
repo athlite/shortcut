@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { render } from 'react-testing-library'
-import Prof from './prof';
+import Prof from '../prof';
 
 describe('Prof Component', () => {
   

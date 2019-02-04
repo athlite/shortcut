@@ -1,9 +1,9 @@
 
 import React from 'react';
 import { render, fireEvent, wait } from 'react-testing-library'
-import App from './app';
-import {createTopic} from './api';
-jest.mock('./api');
+import App from '../app';
+import {createTopic} from '../api';
+jest.mock('../api');
 
 createTopic.mockResolvedValue({
   message: 'ok'
