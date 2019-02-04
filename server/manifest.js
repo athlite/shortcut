@@ -21,6 +21,7 @@ module.exports = new Confidence.Store({
       $coerce: 'number',
       $default: 3000
     },
+    // Tell 'inert' where to find files ..
     routes: {
       files: {
         relativeTo: Path.join(__dirname, '..', 'public')
