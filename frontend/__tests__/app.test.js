@@ -11,7 +11,7 @@ createTopic.mockResolvedValue({
 
 describe('App Component', () => {
   
-  test('should render element', async () => {
+  test('should render App', async () => {
     
     const client = {
       connect: jest.fn(),
